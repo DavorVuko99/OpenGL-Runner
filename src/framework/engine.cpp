@@ -188,7 +188,7 @@ void Engine::update() {
     // Update buildings
     for (int i = 0; i < buildings1.size(); ++i) {
         // Move all the red buildings to the left
-        buildings1[i]->moveX(-1.5);
+        buildings1[i]->moveX(-1.75);
         // If a building has moved off the screen
         if (buildings1[i]->getPosX() < -(buildings1[i]->getSize().x/2)) {
             // Set it to the right of the screen so that it passes through again
@@ -201,23 +201,23 @@ void Engine::update() {
     //  The larger the buildings, the slower they should move.
     for (int i = 0; i < buildings2.size(); ++i) {
         // Move all the red buildings to the left
-        buildings2[i]->moveX(-1);
+        buildings2[i]->moveX(-0.85);
         // If a building has moved off the screen
         if (buildings2[i]->getPosX() < -(buildings2[i]->getSize().x/2)) {
             // Set it to the right of the screen so that it passes through again
             int buildingOnLeft = (buildings2[i] == buildings2[0]) ? buildings2.size()-1 : i - 1;
-            buildings2[i]->setPosX(buildings2[buildingOnLeft]->getPosX() + buildings2[buildingOnLeft]->getSize().x/2 + buildings1[i]->getSize().x/2 + 5);
+            buildings2[i]->setPosX(buildings2[buildingOnLeft]->getPosX() + buildings2[buildingOnLeft]->getSize().x/2 + buildings2[i]->getSize().x/2 + 5);
         }
     }
 
     for (int i = 0; i < buildings3.size(); ++i) {
         // Move all the red buildings to the left
-        buildings3[i]->moveX(-0.5);
+        buildings3[i]->moveX(-0.25);
         // If a building has moved off the screen
         if (buildings3[i]->getPosX() < -(buildings3[i]->getSize().x/2)) {
             // Set it to the right of the screen so that it passes through again
             int buildingOnLeft = (buildings3[i] == buildings3[0]) ? buildings3.size()-1 : i - 1;
-            buildings3[i]->setPosX(buildings3[buildingOnLeft]->getPosX() + buildings3[buildingOnLeft]->getSize().x/2 + buildings1[i]->getSize().x/2 + 5);
+            buildings3[i]->setPosX(buildings3[buildingOnLeft]->getPosX() + buildings3[buildingOnLeft]->getSize().x/2 + buildings3[i]->getSize().x/2 + 5);
         }
     }
 
