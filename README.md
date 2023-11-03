@@ -6,6 +6,7 @@ For this project, you will use C++ graphics with classes to create an interactiv
 
 You may work individually or with a partner of your choosing.
 
+
 ## Setup
 
 Use this Guided Project template to create a new repository (see [GitHub-with-CLion](https://github.com/uvmcs2300f2023/GitHub-with-CLion) repo for directions).

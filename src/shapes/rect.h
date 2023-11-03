@@ -6,11 +6,11 @@
 #include <iostream>
 using glm::vec2, glm::vec3;
 
-
 class Rect : public Shape {
 private:
     /// @brief Initializes the vertices and indices of the square
     void initVectors() override;
+
 public:
     /// @brief Construct a new Square object
     /// @details This constructor will call the InitRenderData function.

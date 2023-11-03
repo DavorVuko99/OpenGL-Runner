@@ -239,8 +239,6 @@ void Engine::render() {
     //  Note that the order of drawing matters because whatever
     //  is drawn last appears on top.
     // Draw the user
-    user->setUniforms();
-    user->draw();
 
     // Draw buildings3
     for (const unique_ptr<Rect>& r : buildings3) {
@@ -259,6 +257,9 @@ void Engine::render() {
         r->setUniforms();
         r->draw();
     }
+
+    user->setUniforms();
+    user->draw();
 
     glfwSwapBuffers(window);
 }
